@@ -335,13 +335,20 @@
 	<build>
 		<resources>
 			<resource>
+				<directory>src/main/resources/${package.environment}</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.properties</include>
+					<include>*.xml</include>
+				</includes>
+			</resource>
+			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
-				<excludes>
-					<exclude>local/*</exclude>
-					<exclude>dev/*</exclude>
-					<exclude>prod/*</exclude>
-				</excludes>
+				<includes>
+					<include>*.properties</include>
+					<include>*.xml</include>
+				</includes>
 			</resource>
 		</resources>
 
@@ -363,17 +370,25 @@
 					<archive>
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
-					<warName>book</warName>
+					<warName>spring-web-demo</warName>
 					<webResources>
 						<resource>
 							<directory>src/main/resources/${package.environment}</directory>
 							<targetPath>WEB-INF/classes</targetPath>
 							<filtering>true</filtering>
+							<includes>
+								<include>*.properties</include>
+								<include>*.xml</include>
+							</includes>
 						</resource>
 						<resource>
 							<directory>src/main/resources/</directory>
 							<targetPath>WEB-INF/classes</targetPath>
 							<filtering>true</filtering>
+							<includes>
+								<include>*.properties</include>
+								<include>*.xml</include>
+							</includes>
 						</resource>
 					</webResources>
 				</configuration>
