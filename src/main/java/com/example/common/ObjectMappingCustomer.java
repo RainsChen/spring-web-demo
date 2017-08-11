@@ -1,11 +1,8 @@
 package com.example.common;
 
-/**
- * Created by YAO on 2017-03-08.
- */
 
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Json序列华全局配置(主要解决Long型转String)
@@ -24,7 +21,7 @@ public class ObjectMappingCustomer extends ObjectMapper
         // 字段和值都加引号
         //this.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
         // 数字也加引号
-        this.configure(JsonGenerator.Feature.WRITE_NUMBERS_AS_STRINGS, true);
+//        this.configure(JsonGenerator.Feature.WRITE_NUMBERS_AS_STRINGS, true);
         this.configure(JsonGenerator.Feature.QUOTE_NON_NUMERIC_NUMBERS, true);
         // 空值处理为空串
 //        this.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>()
