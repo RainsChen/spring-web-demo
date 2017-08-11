@@ -63,11 +63,11 @@
     </appenders>
     <loggers>
 
-        <Root level="debug" includeLocation="true">
+        <asyncRoot level="debug" includeLocation="true">
             <AppenderRef ref="DebugLog"/>
             <AppenderRef ref="ErrorLog"/>
             <AppenderRef ref="InfoLog"/>
             <AppenderRef ref="Console"/>
-        </Root>
+        </asyncRoot>
     </loggers>
 </configuration>
