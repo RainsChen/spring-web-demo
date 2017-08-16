@@ -72,4 +72,9 @@
     <!-- 启用对事务注解的支持 -->
     <tx:annotation-driven transaction-manager="transactionManager" />
 
+    <!-- 框架异常处理Handler -->
+    <bean id="exceptionResolver" class="com.example.common.ApplicationExceptionResolver" />
+
+    <!-- Spring中引入其他配置文件 -->
+    <import resource="classpath:spring-mvc-config.xml" />
 </beans>
